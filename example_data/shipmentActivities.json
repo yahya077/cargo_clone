@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "602bd2913409c009fca8efdf"
+  },
+  "status": "paketlendi",
+  "shipment": {
+    "$oid": "60689bb8f8b0b1afe6b644e0"
+  },
+  "createdAt": {
+    "$date": "2021-02-16T14:11:29.009Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-16T14:11:29.009Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "602bd2913409c009fca8efd9"
+  },
+  "status": "aktarmada",
+  "shipment": {
+    "$oid": "60689bb8f8b0b1afe6b644e0"
+  },
+  "createdAt": {
+    "$date": "2021-02-16T14:11:29.009Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-16T14:11:29.009Z"
+  },
+  "__v": 0
+}]

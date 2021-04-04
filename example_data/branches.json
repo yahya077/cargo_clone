@@ -1,0 +1,101 @@
+[{
+  "_id": {
+    "$oid": "6021969673a06738b4ef7577"
+  },
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      28.941899,
+      41.062786
+    ],
+    "formattedAddress": "Narenciye Sokak, Antalya, 07350, TR",
+    "street": "Maslah mah.",
+    "city": "İstanbul",
+    "state": "",
+    "zipcode": "07350",
+    "country": "TR"
+  },
+  "name": "Maslak Mah. Sarıyer/Istanbul",
+  "createdAt": {
+    "$date": "2021-02-08T19:52:54.884Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-08T19:52:54.884Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6021969673a06738b4ef7576"
+  },
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      30.28446,
+      36.36554
+    ],
+    "formattedAddress": "Narenciye Sokak, Antalya, 07350, TR",
+    "street": "Narenciye Sokak",
+    "city": "Antalya",
+    "state": "",
+    "zipcode": "07350",
+    "country": "TR"
+  },
+  "name": "Konuksever Mah. Muratpaşa/Antalya",
+  "createdAt": {
+    "$date": "2021-02-08T19:52:54.884Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-08T19:52:54.884Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6021969673a06738b4ef7574"
+  },
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      30.28446,
+      36.36554
+    ],
+    "formattedAddress": "Narenciye Sokak, Antalya, 07350, TR",
+    "street": "Narenciye Sokak",
+    "city": "Antalya",
+    "state": "",
+    "zipcode": "07350",
+    "country": "TR"
+  },
+  "name": "Yeni Mah. Kumluca/Antalya",
+  "createdAt": {
+    "$date": "2021-02-08T19:52:54.884Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-08T19:52:54.884Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6021969673a06738b4ef7575"
+  },
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      30.28446,
+      36.36554
+    ],
+    "formattedAddress": "Narenciye Sokak, Antalya, 07350, TR",
+    "street": "Narenciye Sokak",
+    "city": "Antalya",
+    "state": "",
+    "zipcode": "07350",
+    "country": "TR"
+  },
+  "name": "Gökçek Mah. Sincan/Ankara",
+  "createdAt": {
+    "$date": "2021-02-08T19:52:54.884Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-08T19:52:54.884Z"
+  },
+  "__v": 0
+}]

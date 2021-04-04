@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "60689bb8f8b0b1afe6b644e0"
+  },
+  "username": "demo",
+  "code": "0000000000",
+  "from": "Antalya",
+  "to": "Ankara",
+  "createdAt": {
+    "$date": "2021-01-25T11:45:47.456Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-25T11:45:47.456Z"
+  }
+}]
