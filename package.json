@@ -1,0 +1,32 @@
+{
+  "name": "cargo_clone",
+  "version": "1.0.0",
+  "description": "Clone of cargo company ( demo )",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "stop": "taskkill -f -im node.exe"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yahya077/cargo_clone.git"
+  },
+  "author": "Yahya Hindioglu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yahya077/cargo_clone/issues"
+  },
+  "homepage": "https://github.com/yahya077/cargo_clone#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "google-distance": "^1.0.1",
+    "mongoose": "^5.12.3",
+    "node-geocoder": "^3.27.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

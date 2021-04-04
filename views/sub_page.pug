@@ -1,0 +1,6 @@
+extends layouts/main_layout.pug
+
+include mixins/mixins
+block content
+    +createSubPageBanner(payload)
+    +createSinglePageBody(payload)

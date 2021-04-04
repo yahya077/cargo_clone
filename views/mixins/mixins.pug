@@ -1,0 +1,230 @@
+mixin createSlider()
+  .banner(style='height: 511px')
+    .check-content
+        ul#pills-tab.nav.nav-pills(role='tablist')
+          li.nav-item(role='presentation')
+            button#pills-home-tab.nav-link.active(data-bs-toggle='pill' data-bs-target='#pills-home' type='button' role='tab' aria-controls='pills-home' aria-selected='true') G&ouml;nderi Takibi
+          li.nav-item(role='presentation')
+            button#pills-profile-tab.nav-link(data-bs-toggle='pill' data-bs-target='#pills-profile' type='button' role='tab' aria-controls='pills-profile' aria-selected='false') &Scedil;ube Sorgulama
+          li.nav-item(role='presentation')
+            button#pills-contact-tab.nav-link(data-bs-toggle='pill' data-bs-target='#pills-contact' type='button' role='tab' aria-controls='pills-contact' aria-selected='false') Fiyat Hesaplama
+          li.nav-item(role='presentation')
+            button#pills-batch-tab.nav-link(data-bs-toggle='pill' data-bs-target='#pills-batch' type='button' role='tab' aria-controls='pills-batch' aria-selected='false') Kurye &Ccedil;a&gbreve;&imath;r
+        .tr-bg
+        #pills-tabContent.tab-content(style='position: sticky')
+          #pills-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-home-tab')
+            .input-group(style='width: 22.7rem;height: 3.5rem;')
+              input.form-control(type='text' placeholder='Gönderi kodunuzu girin' style='border-radius: 20px;width: 1rem;' id='shipmentCode')
+              button#shipment-check-btn.input-group-text(type='button' style='background-color: transparent;border: 1px;position: relative;right: 3rem; z-index:999;' data-bs-toggle='modal' data-bs-target='#checkModal')
+                i.fas.fa-search(style='color: #c5c5c5; font-size: 1.4rem; cursor: pointer')
+            .bottom-pill.d-flex
+              i.fas.fa-chevron-right(style='padding-left: .3rem; font-size: .8rem;')
+              span  G&Ouml;NDER&Idot; / AWB KODU NED&Idot;R?
+          #pills-profile.tab-pane.fade(role='tabpanel' aria-labelledby='pills-profile-tab')
+            .input-group(style='width: 22.7rem;height: 3.5rem;')
+              input.form-control(type='text' placeholder='Örn. Maslak Mah. Sarıyer İstanbul' style='border-radius: 20px;width: 1rem;' id="branchInput" autocomplete="off")
+              span#branch-check-btn.input-group-text(style='background-color: transparent;border: 1px;position: relative;right: 3rem;')
+                i.fas.fa-search(style='color: #c5c5c5; font-size: 1.4rem')
+            #branch-dropdown.branch-dropdown    
+            .bottom-pill.d-flex
+              i.fas.fa-info(style='margin-left: .3rem; font-size: .7rem; border: 2px solid #fff; border-radius: .2rem; padding: .1rem .3rem')
+              span(style='font-weight: 400')
+                | Sorgulamak istedi&gbreve;iniz &scedil;ubenin; il, il&ccedil;e ve mahalle bilgileriyle h&imath;zl&imath;ca sonu&ccedil;lar&imath;na eri&scedil;ebilirsiniz.
+          #pills-contact.tab-pane.fade(role='tabpanel' aria-labelledby='pills-contact-tab')
+            .d-flex
+              .input-group(style='width: 11.7rem;height: 3rem; margin-top: .4rem; margin-left: .4rem')
+                input.form-control(type='text' placeholder='Nereden' style='border-radius: 20px;width: 1rem;' data-id="0" id="fromInput" autocomplete="off")
+              #from-dropdown.branch-dropdown.from-dropdown 
+              img(src='/images/custom-arrow.png' width='100' height='40' style='padding: .7rem .6rem;')
+            .bottom-pill.d-flex(style='padding: .5rem 0; margin-left: .4rem;')
+              .input-group(style='width: 11.7rem;height: 3rem;')
+                input.form-control(type='text' placeholder='Nereye' style='border-radius: 20px;width: 1rem;' data-id="0" id="toInput" autocomplete="off")
+              #to-dropdown.branch-dropdown
+              button.btn.btn-warning(id="calculatePrice" type='button' style='background-color: #EF7E01; color: #fff; border-radius: 20px; margin-left: .5rem; font-size: 1.1rem;')
+                | Devam et
+          #pills-batch.tab-pane.fade(role='tabpanel' aria-labelledby='pills-batch-tab')
+            .bottom-pill.d-flex
+              i.fas.fa-info(style='margin-left: .5rem; font-size: .7rem; border: 2px solid #fff; border-radius: .2rem; padding: .1rem .3rem')
+              span(style='font-weight: 500; font-size: .8rem;')
+                | G&ouml;ndermek istedi&gbreve;iniz kargonuz i&ccedil;in kurye &ccedil;a&gbreve;&imath;r sayfam&imath;zdan kurye talep edebilirsiniz.
+            button.btn.btn-warning(type='button' style='background-color: #EF7E01; color: #fff; border-radius: 20px; margin-left: .5rem; font-size: .9rem; font-weight: 500; float: right; margin-right: 1rem; padding: 0.5rem 0.9rem')
+              | KURYE &Ccedil;A&Gbreve;IR
+    .top-mask
+      img(src='/images/top-mask.svg' alt='')
+    #carouselExampleDark.carousel.slide(data-bs-ride='carousel')
+      .carousel-indicators
+        button.active(type='button' data-bs-target='#carouselExampleDark' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+        button(type='button' data-bs-target='#carouselExampleDark' data-bs-slide-to='1' aria-label='Slide 2')
+        button(type='button' data-bs-target='#carouselExampleDark' data-bs-slide-to='2' aria-label='Slide 3')
+      .carousel-inner(style='height: 511px')
+        .carousel-item.active
+          img.d-block.w-100(src='/images/slider-1.png' alt='...')
+          .carousel-caption.d-none.d-md-block
+            .limiter
+              h1 Yurti&ccedil;i Kargo&apos;dan kargolar&imath;n&imath;z&imath; u&ccedil;uran kampanya
+              p
+                | G&ouml;nderilerinizi d&uuml;nyan&imath;n 220&rsquo;den fazla &uuml;lkesine, Yurti&ccedil;i Kargo g&uuml;vencesiyle &uuml;stelik avantajl&imath; fiyatlarla ula&scedil;t&imath;rman&imath;n ayr&imath;cal&imath;&gbreve;&imath;n&imath; ya&scedil;ay&imath;n.
+              button.btn.btn-warning(type='button')
+                | Detayl&imath; Bilgi
+        .carousel-item
+          img.d-block.w-100(src='/images/slider-2.png' alt='...')
+          .carousel-caption.d-none.d-md-block
+            .limiter
+              h1 YK Plus i&ccedil;in ba&scedil;vurular ba&scedil;lad&imath;!
+              p Kendi i&scedil;ini kurmak isteyenlere ve ek gelir kazanmak isteyenlere b&uuml;y&uuml;k f&imath;rsat
+              button.btn.btn-warning(type='button')
+                | Detayl&imath; Bilgi
+        .carousel-item
+          img.d-block(src='/images/slider-3.png' alt='...' width='129.5%')
+          .carousel-caption.d-none.d-md-block
+            .limiter
+              h1 Uzaklar&imath; Yak&imath;nla&scedil;t&imath;ran Kampanya
+              p Almanya&apos;ya yapaca&gbreve;&imath;n&imath;z g&ouml;nderilerinize %40 indirim!
+              button.btn.btn-warning(type='button')
+                | Detayl&imath; Bilgi
+
+      button.carousel-control-prev(type='button' data-bs-target='#carouselExampleDark' data-bs-slide='prev')
+        span.carousel-control-prev-icon(aria-hidden='true')
+        span.visually-hidden Previous
+      button.carousel-control-next(type='button' data-bs-target='#carouselExampleDark' data-bs-slide='next')
+        span.carousel-control-next-icon(aria-hidden='true')
+        span.visually-hidden Next
+    .bottom-mask
+      img(src='/images/bottom-mask.svg' alt='')
+
+mixin createBlog()
+  .middle-blog-tabs
+    ul#pills-tab.nav.nav-pills.mb-3(role='tablist')
+      li.nav-item(role='presentation')
+        button#pills-first-tab.nav-link.active(data-bs-toggle='pill' data-bs-target='#pills-first' type='button' role='tab' aria-controls='pills-first' aria-selected='true') SOSYAL SORUMLULUK
+      li.nav-item(role='presentation')
+        button#pills-second-tab.nav-link(data-bs-toggle='pill' data-bs-target='#pills-second' type='button' role='tab' aria-controls='pills-second' aria-selected='false') YURT&Idot;&Ccedil;&Idot; KARGO PARO KART
+      li.nav-item(role='presentation')
+        button#pills-third-tab.nav-link(data-bs-toggle='pill' data-bs-target='#pills-third' type='button' role='tab' aria-controls='pills-third' aria-selected='false') BUNLARI B&Idot;L&Idot;YOR MUSUNUZ?
+      li.nav-item(role='presentation')
+        button#pills-fourth-tab.nav-link(data-bs-toggle='pill' data-bs-target='#pills-fourth' type='button' role='tab' aria-controls='pills-fourth' aria-selected='false') HABERLER
+      li.nav-item(role='presentation')
+        button#pills-fifth-tab.nav-link(data-bs-toggle='pill' data-bs-target='#pills-fifth' type='button' role='tab' aria-controls='pills-fifth' aria-selected='false') DUYURULAR
+    #pills-tabContent.tab-content.card-tab
+      #pills-first.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-first-tab')
+        .d-flex
+          +createBlogItem('Lösev','Yurtiçi Kargo, maddi güçlükler içindeki binlerce lösemili çocuğa ücretsiz tedavi,','/images/card-1.png')
+          +createBlogItem('İlkyar','1998 yılında sınırlı olanaklarla eğitim görmeye çalışan köy çocuklarına yardım eli uzatmak için,','/images/card-2.png')
+          +createBlogItem('Türkiye Omurilik Felçlileri Derneği','1998 yılında, omurilik felçlilerinin tıbbî, meslekî, ekonomik, sosyal sorunlarının','/images/card-3.png')
+      #pills-second.tab-pane.fade(role='tabpanel' aria-labelledby='pills-second-tab')
+        .d-flex
+          +createBlogItem('Türkiye Omurilik Felçlileri Derneği','1998 yılında, omurilik felçlilerinin tıbbî, meslekî, ekonomik, sosyal sorunlarının','/images/card-3.png')
+        
+      #pills-third.tab-pane.fade(role='tabpanel' aria-labelledby='pills-third-tab')
+        .d-flex
+          +createBlogItem('İlkyar','1998 yılında sınırlı olanaklarla eğitim görmeye çalışan köy çocuklarına yardım eli uzatmak için,','/images/card-2.png')
+
+      #pills-fourth.tab-pane.fade(role='tabpanel' aria-labelledby='pills-fourth-tab')
+        .d-flex
+          +createBlogItem('Lösev','Yurtiçi Kargo, maddi güçlükler içindeki binlerce lösemili çocuğa ücretsiz tedavi,','/images/card-1.png')
+
+      #pills-fifth.tab-pane.fade(role='tabpanel' aria-labelledby='pills-fifth-tab')
+        .d-flex
+          +createBlogItem('Türkiye Omurilik Felçlileri Derneği','1998 yılında, omurilik felçlilerinin tıbbî, meslekî, ekonomik, sosyal sorunlarının','/images/card-3.png')
+
+mixin createBlogItem(title, description, img)
+  .col-lg-3
+    .card(style='width: 21rem;')
+      img.card-img-top(src=img alt='...')
+      .bottom-img-line
+      .card-body
+        h5.card-title=title
+        p.card-text
+          | #{description},
+        a(href='#') DAHA FAZLA
+
+mixin createModal()
+    #checkModal.modal.fade(tabindex='-1' aria-labelledby='checkModalLabel' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    h5#checkModalLabel.modal-title G&ouml;nderi Takibi
+                    button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                .modal-body
+                    .process-holder
+mixin createSubPageBanner(title)
+    .subpage-banner
+      .top-mask
+        img(src='/images/top-mask.svg' alt='')
+      .subpage-wrapper
+        h3= subTitle
+      img(src='/images/slider-1.png' alt='' width='100%' height='163px' style='object-fit: cover')
+      .bottom-mask(style='bottom: 3.8rem')
+        img(src='/images/bottom-mask.svg' alt='')
+    .subpage-wrapper
+      .custom-breadcrumb
+        span
+          a(href='/') Ana Sayfa
+        i.fas.fa-chevron-right(style='padding-right: .5rem; color: #ccc')
+        span.aSpan= pageName
+mixin createSinglePageBody(payload)
+    case page
+      when 'campaigns'
+        +createCampaignBody(data)
+      when 'carier'
+        +createCarierBody(data)
+
+mixin createCampaignBody(data)
+    .container.subpage-wrapper.mb-5
+      .row.d-flex.justify-content-around
+        .campaign-card
+          img.card-img(src='/images/cp-1.png' alt='...')
+          span.card-title ALMANYA KAMPANYASI
+        .campaign-card
+          img.card-img(src='/images/cp-2.png' alt='...')
+          span.card-title KAZANDIRAN SAATLER
+        .campaign-card
+          img.card-img(src='/images/cp-3.png' alt='...')
+          span.card-title M&Uuml;&Scedil;TER&Idot; MOB&Idot;L KAMPANYASI
+        .campaign-card
+          img.card-img(src='/images/cp-4.jpg' alt='...')
+          span.card-title YURT DI&Scedil;I KAMPANYASI
+        .campaign-card
+          img.card-img(src='/images/cp-5.png' alt='...')
+          span.card-title TURKCELL KAMPANYASI
+        .campaign-card
+          img.card-img(src='/images/cp-6.jpg' alt='...')
+          span.card-title T&Uuml;RK ECZACILAR B&Idot;RL&Idot;&Gbreve;&Idot; KAMPANYASI
+        .campaign-card
+          img.card-img(src='/images/cp-7.png' alt='...')
+          span.card-title PAROLULAR KAZANIR KAMPANYASI
+        .campaign-card
+          img.card-img(src='/images/cp-8.png' alt='...')
+          span.card-title BASIN KART SAH&Idot;PLER&Idot; KAMPANYASI
+        .campaign-card
+          img.card-img(src='/images/cp-9.png' alt='...')
+          span.card-title ADALET KART KAMPANYASI
+        .campaign-card
+          img.card-img(src='/images/cp-10.png' alt='...')
+          span.card-title AVUKAT KAMPANYASI
+        .campaign-card
+          img.card-img(src='/images/cp-11.png' alt='...')
+          span.card-title &Idot;NTERNET KARGO KAMPANYASI
+        .campaign-card
+          img.card-img(src='/images/cp-12.png' alt='...')
+          span.card-title POLSAN KAMPANYASI
+        .campaign-card
+          img.card-img(src='/images/cp-13.png' alt='...')
+          span.card-title T&Uuml;RMOB KAMPANYASI
+        .campaign-card
+          img.card-img(src='/images/cp-14.png' alt='...')
+          span.card-title PARAM KART KAMPANYASI
+mixin createDemo(data)
+    .container.subpage-wrapper.mb-5
+      h1 Empty
+mixin createCarierBody(data)
+    .container.subpage-wrapper.mb-5.carier-page
+        p Biz Yurtiçi Kargo'da insan unsurunun en önemli faktör olduğuna inanıyoruz. Bilinçli çalışma, dürüstlük, sabır, tutarlılık, üstün kalite, gelişme ve geliştirme, koşulsuz sevgi, yardım etme ve yüreklendirme; Yurtiçi Kargo'da oluşturduğumuz kültürün dayandığı temel ilkelerdir. İnsan Kaynakları Politikalarımız, oluşturduğumuz kültürün yanısıra vazgeçilmez değerlerimize birlikte sahip çıkmanın üzerine kurulmuştur. Bu değerlerin özünde; müşteri ve kalite odaklı olmak, katılımcılık, liderlik, insana saygı ve sosyal sorumluluk bilinci vardır. Belli bir hedefe ulaşmak isteyen ekiplerin ortak değerlerinin bulunması ve ekipteki tüm bireylerin, davranışları ve kararları ile bu değerlere sahip çıkmaları, başarının ön koşuludur. Bizim de stratejimiz; bizi biz yapan ve Yurtiçi Kargo'ya bu büyümeyi sağlayan değerlerimize sahip çıkmak, diğer bir yandan da değişen ülke ve dünya koşullarının gerektirdiği yeni hedef, davranış ve sistemleri kurum kültürümüzün içine dahil etmektir.
+        |
+        p Katılımcı, performans ve gelişim odaklı kurum kültürümüzün en önemli araçlarından biri Ekim 2001'de yürürlüğe giren "Öneri Sistemi"dir. Bu uygulama Yurtiçi Kargo Servisi A.Ş.'nin genel organizasyonu içinde kişisel sorumluluğu arttıran ve her düzeyden düşünceyi özendiren paylaşımcı misyonumuzun bir yansımasıdır. Öneri Geliştirme Sistemi'ne tüm çalışanlar unvan/fonksiyon ayrımı gözetmeksizin birey olarak öneride bulunmaktadırlar.
+        img(src="/images/carier.png", alt="")
+
+
+
+
+
