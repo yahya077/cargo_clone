@@ -1,6 +1,6 @@
 #### A simple clone of Yurtiçi Cargo. One of shipment company in Turkey. The Github files also include frontend and json files.
 
-## You can preview the application live on heroku. (The link will be add)
+## You can preview the application live on heroku. [Run App](https://clone-cargo.herokuapp.com)
 
 ## 🚀&nbsp; Installation and Documentation
 
