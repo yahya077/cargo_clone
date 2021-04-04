@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gargocu</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="rmv-container" style="height: 7.5rem">
+        <div class="top-container d-flex justify-content-between">
+            <div class="select-picker">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 11.2px; color: #8c8c8c">
+                    Türkçe
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Türkçe</a></li>
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                </ul>
+            </div>
+            <ul class="socials-wrapper d-flex mt-1">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+        <div class="top-container" style="margin: 1rem 0 0 7rem">
+            <img src="assets/images/logo.svg" alt="logo" width="179px" height="45px">
+            <div class="top-nav-options d-flex">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Hızlı Erişim" style="border-radius: 1.3rem;width: 1rem;">
+                    <span class="input-group-text" id="basic-addon2" style="background-color: transparent;border: 1px;position: relative;right: 2.8rem;"><i class="fas fa-running" style="color: #EF7D00; font-size: 1.2rem"></i></span>
+                </div>
+                <div class="icon-text-wrapper d-flex align-items-center">
+                    <i class="fab fa-wpforms" style="font-size: 1.1rem; color: #ef7d00"></i>
+                    <span style="padding-left: .5rem">İLETİŞİM FORMU</span>
+                </div>
+                <div class="top-login-register">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span>ÜYE GİRİŞİ / ÜYE OLUN</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-custom mt-4">
+        <div class="container-fluid" style="padding-left: 0px">
+            <a class="navbar-brand" href="#" style="margin-right: .5rem">
+                <img src="assets/images/home.png" alt="" width="22" height="22">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Kampanyalar</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Ürün Ve Hizmetler
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Online Servisler
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kariyer</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="banner" style="height: 511px">
+        <div class="check-content">
+            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Gönderi Takibi</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Şube Sorgulama</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Fiyat Hesaplama</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-batch-tab" data-bs-toggle="pill" data-bs-target="#pills-batch" type="button" role="tab" aria-controls="pills-batch" aria-selected="false">Kurye Çağır</button>
+                </li>
+            </ul>
+            <div class="tr-bg"></div>
+            <div class="tab-content" id="pills-tabContent" style="position: sticky">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div class="input-group" style="width: 22.7rem;height: 3.5rem;">
+                        <input type="text" class="form-control" placeholder="Gönderi kodunuzu girin" style="border-radius: 20px;width: 1rem;">
+                        <button type="button" class="input-group-text" id="basic-addon2" style="background-color: transparent;border: 1px;position: relative;right: 3rem;" data-bs-toggle="modal" data-bs-target="#checkModal"><i class="fas fa-search" style="color: #c5c5c5; font-size: 1.4rem; cursor: pointer"></i></button>
+                    </div>
+                    <div class="bottom-pill d-flex">
+                        <i class="fas fa-chevron-right" style="padding-left: .3rem; font-size: .8rem;"></i>
+                        <span> GÖNDERİ / AWB KODU NEDİR?</span>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <div class="input-group" style="width: 22.7rem;height: 3.5rem;">
+                        <input type="text" class="form-control" placeholder="Örn. Maslak Mah. Sarıyer İstanbul" style="border-radius: 20px;width: 1rem;">
+                        <span class="input-group-text" id="basic-addon2" style="background-color: transparent;border: 1px;position: relative;right: 3rem;"><i class="fas fa-search" style="color: #c5c5c5; font-size: 1.4rem"></i></span>
+                    </div>
+                    <div class="branch-dropdown">
+                        <span data-id="0">Maslak Mah. Sarıyer/İstanbul</span>
+                        <span>Maslak Mah. Sarıyer/İstanbul</span>
+                        <span>Maslak Mah. Sarıyer/İstanbul</span>
+                        <span>Maslak Mah. Sarıyer/İstanbul</span>
+                        <span>Maslak Mah. Sarıyer/İstanbul</span>
+                        <span>Maslak Mah. Sarıyer/İstanbul</span>
+                        <span>Maslak Mah. Sarıyer/İstanbul</span>
+                    </div>
+                    <div class="bottom-pill d-flex">
+                        <i class="fas fa-info" style="margin-left: .3rem; font-size: .7rem; border: 2px solid #fff; border-radius: .2rem; padding: .1rem .3rem"></i>
+                        <span style="font-weight: 400"> Sorgulamak istediğiniz şubenin; il, ilçe ve mahalle bilgileriyle hızlıca sonuçlarına erişebilirsiniz.</span>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="d-flex">
+                        <div class="input-group" style="width: 11.7rem;height: 3rem; margin-top: .4rem; margin-left: .4rem">
+                            <input type="text" class="form-control" placeholder="Nereden" style="border-radius: 20px;width: 1rem;">
+                        </div>
+                        <img src="assets/images/custom-arrow.png" width="100" height="40" style="padding: .7rem .6rem;">
+                    </div>
+                    <div class="bottom-pill d-flex" style="padding: .5rem 0; margin-left: .4rem;">
+                        <div class="input-group" style="width: 11.7rem;height: 3rem;">
+                            <input type="text" class="form-control" placeholder="Nereye" style="border-radius: 20px;width: 1rem;">
+                        </div>
+                        <button type="button" class="btn btn-warning" style="background-color: #EF7E01; color: #fff; border-radius: 20px; margin-left: .5rem; font-size: 1.1rem;">
+                            Devam et
+                        </button>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-batch" role="tabpanel" aria-labelledby="pills-batch-tab">
+                    <div class="bottom-pill d-flex">
+                        <i class="fas fa-info" style="margin-left: .5rem; font-size: .7rem; border: 2px solid #fff; border-radius: .2rem; padding: .1rem .3rem"></i>
+                        <span style="font-weight: 500; font-size: .8rem;"> Göndermek istediğiniz kargonuz için kurye çağır sayfamızdan kurye talep edebilirsiniz.</span>
+                    </div>
+                    <button type="button" class="btn btn-warning" style="background-color: #EF7E01; color: #fff; border-radius: 20px; margin-left: .5rem; font-size: .9rem; font-weight: 500; float: right; margin-right: 1rem; padding: 0.5rem 0.9rem">
+                        KURYE ÇAĞIR
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="top-mask">
+            <img src="assets/images/top-mask.svg" alt="">
+        </div>
+        <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner" style="height: 511px">
+                <div class="carousel-item active">
+                    <img src="assets/images/slider-1.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="limiter">
+                            <h1>Yurtiçi Kargo'dan kargolarınızı uçuran kampanya</h1>
+                            <p>Gönderilerinizi dünyanın 220’den fazla ülkesine, Yurtiçi Kargo güvencesiyle üstelik avantajlı fiyatlarla ulaştırmanın ayrıcalığını yaşayın.</p>
+                            <button type="button" class="btn btn-warning">
+                                Detaylı Bilgi
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/slider-2.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="limiter">
+                            <h1>YK Plus için başvurular başladı!</h1>
+                            <p>Kendi işini kurmak isteyenlere ve ek gelir kazanmak isteyenlere büyük fırsat</p>
+                            <button type="button" class="btn btn-warning">
+                                Detaylı Bilgi
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/slider-3.png" class="d-block" alt="..." width="129.5%">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="limiter">
+                            <h1>Uzakları Yakınlaştıran Kampanya</h1>
+                            <p>Almanya'ya yapacağınız gönderilerinize %40 indirim!</p>
+                            <button type="button" class="btn btn-warning">
+                                Detaylı Bilgi
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="bottom-mask">
+            <img src="assets/images/bottom-mask.svg" alt="">
+        </div>
+    </div>
+    <div class="row d-flex middle-links justify-content-around">
+        <img src="assets/images/m-1.png" alt="">
+        <img src="assets/images/m-2.png" style="width: 13rem;height: 4.5rem;">
+        <img src="assets/images/m-3.png" alt="">
+        <img src="assets/images/m-4.png" alt="">
+    </div>
+    <div class="middle-blog-tabs">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-first-tab" data-bs-toggle="pill" data-bs-target="#pills-first" type="button" role="tab" aria-controls="pills-first" aria-selected="true">SOSYAL SORUMLULUK</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-second-tab" data-bs-toggle="pill" data-bs-target="#pills-second" type="button" role="tab" aria-controls="pills-second" aria-selected="false">YURTİÇİ KARGO PARO KART</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-third-tab" data-bs-toggle="pill" data-bs-target="#pills-third" type="button" role="tab" aria-controls="pills-third" aria-selected="false">BUNLARI BİLİYOR MUSUNUZ?</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-fourth-tab" data-bs-toggle="pill" data-bs-target="#pills-fourth" type="button" role="tab" aria-controls="pills-fourth" aria-selected="false">HABERLER</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-fifth-tab" data-bs-toggle="pill" data-bs-target="#pills-fifth" type="button" role="tab" aria-controls="pills-fifth" aria-selected="false">DUYURULAR</button>
+            </li>
+        </ul>
+        <div class="tab-content card-tab" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-first" role="tabpanel" aria-labelledby="pills-first-tab">
+                <div class="d-flex">
+                    <div class="col-lg-3">
+                        <div class="card" style="width: 21rem;">
+                            <img src="assets/images/card-1.png" class="card-img-top" alt="...">
+                            <div class="bottom-img-line"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">Lösev</h5>
+                                <p class="card-text">Yurtiçi Kargo, maddi güçlükler içindeki binlerce lösemili çocuğa ücretsiz tedavi,</p>
+                                <a href="#">DAHA FAZLA</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card" style="width: 21rem;">
+                            <img src="assets/images/card-2.png" class="card-img-top" alt="...">
+                            <div class="bottom-img-line"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">İlkyar</h5>
+                                <p class="card-text">1998 yılında sınırlı olanaklarla eğitim görmeye çalışan köy çocuklarına yardım eli uzatmak için</p>
+                                <a href="#">DAHA FAZLA</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card" style="width: 21rem;">
+                            <img src="assets/images/card-3.png" class="card-img-top" alt="...">
+                            <div class="bottom-img-line"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">Türkiye Omurilik Felçlileri Derneği</h5>
+                                <p class="card-text">1998 yılında, omurilik felçlilerinin tıbbî, meslekî, ekonomik, sosyal sorunlarının</p>
+                                <a href="#">DAHA FAZLA</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-second" role="tabpanel" aria-labelledby="pills-second-tab">
+
+            </div>
+            <div class="tab-pane fade" id="pills-third" role="tabpanel" aria-labelledby="pills-third-tab">
+
+            </div>
+            <div class="tab-pane fade" id="pills-fourth" role="tabpanel" aria-labelledby="pills-fourth-tab">
+
+            </div>
+            <div class="tab-pane fade" id="pills-fifth" role="tabpanel" aria-labelledby="pills-fifth-tab">
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal of check post -->
+    <div class="modal fade" id="checkModal" tabindex="-1" aria-labelledby="checkModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="checkModalLabel">Gönderi Takibi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="process-holder">
+                        <span class="aSpan">Paketlendi</span>
+                        <span class="blink">Aktarmada</span>
+                        <span>Dağıtım Şubesinde</span>
+                        <span>Kuryede</span>
+                        <span>Teslim Edildi</span>
+                    </div>
+
+                </div>
+<!--                <div class="modal-body">
+                    <div class="process-holder">
+                        <button class="btn btn-outline-danger" disabled>Gönderi kodu bulunamadı!</button>
+                    </div>
+                </div>-->
+<!--                <div class="modal-body">
+                    <div class="process-holder">
+                        <button class="btn btn-outline-success" disabled>Şuan da Açık</button>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    <img src="assets/images/bt-mid.png" alt="" width="100%">
+    <footer>
+        <div class="col-lg-12 d-flex justify-content-between">
+            <ul class="footer-links">
+                <li><a href="#">HAKKIMIZDA</a></li>
+                <li><a href="#">SİTE HARİTASI</a></li>
+                <li><a href="#">ŞUBELERİMİZ</a></li>
+                <li><a href="#">ÖNERİ VE ŞİKAYET</a></li>
+                <li><a href="#">GİZLİLİK VE GÜVENLİK</a></li>
+                <li><a href="#">KVKK</a></li>
+                <li><a href="#">ENTEGRASYON</a></li>
+                <li><a href="#">S.S.S</a></li>
+                <li><a href="#">GÖNDERİ REHBERLERİ</a></li>
+                <li><a href="#">KARİYER</a></li>
+            </ul>
+            <ul class="socials-wrapper d-flex mt-1">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js" integrity="sha512-UwcC/iaz5ziHX7V6LjSKaXgCuRRqbTp1QHpbOJ4l1nw2/boCfZ2KlFIqBUA/uRVF0onbREnY9do8rM/uT/ilqw==" crossorigin="anonymous"></script>
+</body>
+
+</html>
