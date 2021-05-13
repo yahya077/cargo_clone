@@ -1,3 +1,37 @@
+mixin createNav()
+  nav.navbar.navbar-expand-lg.navbar-custom.mt-4
+    .container-fluid(style='padding-left: 0px')
+      a.navbar-brand(href='#' style='margin-right: .5rem')
+        img(src='/images/home.png' alt='' width='22' height='22')
+      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarNavDropdown.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link.active(aria-current='page' href='/campaigns') Kampanyalar
+          li.nav-item.dropdown
+            a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+              | &Uuml;r&uuml;n Ve Hizmetler
+            ul.dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+              li
+                a.dropdown-item(href='#') Action
+              li
+                a.dropdown-item(href='#') Another action
+              li
+                a.dropdown-item(href='#') Something else here
+          li.nav-item.dropdown
+            a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+              | Online Servisler
+            ul.dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+              li
+                a.dropdown-item(href='#') Action
+              li
+                a.dropdown-item(href='#') Another action
+              li
+                a.dropdown-item(href='#') Something else here
+          li.nav-item
+            a.nav-link(href='/carier') Kariyer
+
 mixin createSlider()
   .banner(style='height: 511px')
     .check-content
@@ -126,7 +160,6 @@ mixin createBlog()
       #pills-fifth.tab-pane.fade(role='tabpanel' aria-labelledby='pills-fifth-tab')
         .d-flex
           +createBlogItem('Türkiye Omurilik Felçlileri Derneği','1998 yılında, omurilik felçlilerinin tıbbî, meslekî, ekonomik, sosyal sorunlarının','/images/card-3.png')
-
 mixin createBlogItem(title, description, img)
   .col-lg-3
     .card(style='width: 21rem;')
@@ -224,6 +257,105 @@ mixin createCarierBody(data)
         p Katılımcı, performans ve gelişim odaklı kurum kültürümüzün en önemli araçlarından biri Ekim 2001'de yürürlüğe giren "Öneri Sistemi"dir. Bu uygulama Yurtiçi Kargo Servisi A.Ş.'nin genel organizasyonu içinde kişisel sorumluluğu arttıran ve her düzeyden düşünceyi özendiren paylaşımcı misyonumuzun bir yansımasıdır. Öneri Geliştirme Sistemi'ne tüm çalışanlar unvan/fonksiyon ayrımı gözetmeksizin birey olarak öneride bulunmaktadırlar.
         img(src="/images/carier.png", alt="")
 
+mixin showLoginForm()
+    .loader
+    .login-wrapper
+      .login-box
+          h2 Şube Giriş
+          form
+            span(class="errorMessage")
+            .user-box
+              input(type='text' name='code' required='' id="loginCode" autocomplete="off")
+              label Şube Kod
+            .user-box
+              input(type='password' name='pass' required='' id="loginPass" autocomplete="off")
+              label Şube Şifre
+            a(href='#' id="submitLogin")
+              span
+              span
+              span
+              span
+              |
+              p(style="margin:0") Giriş Yap
+
+mixin updateNameForm(data)
+  .customFormBox
+    h2 Şube Bilgilerini Güncelle
+    form(class="customForm")
+      span(class="errorMessage")
+      .user-box
+        input(type='text' name='name' required='' id="branchName" value=data.name autocomplete="off")
+        input(type='hidden' name='id' required='' id="branchId" value=data._id autocomplete="off")
+        label Şube Adı
+      a(href='#' id="submitUpdateProfile")
+        span
+        span
+        span
+        span
+        |
+        p(style="margin:0") Güncelle
+
+mixin createCargoForm()
+  .customFormBox(style="height:380px")
+    h2 Kargo Yükle
+    form(class="customForm")
+      span(class="errorMessage")
+      .user-box
+        input(type='text' name='name' required='' id="userName" autocomplete="off")
+        label Gönderi Ad-Soyad
+      .user-box
+        input(type='text' name='name' required='' id="toInput" data-id="0" autocomplete="off")
+        label Nereye
+        #to-dropdown.branch-dropdown(style="margin-top: -1rem;")
+      button(id="createCargo")
+        span
+        span
+        span
+        span
+        |
+        p(style="margin:0") Kargola
+
+mixin checkCargoForm()
+  .customFormBox(style="height:310px")
+    h2 Kargo Sorgula
+    form(class="customForm")
+      span(class="errorMessage")
+      .user-box
+        input(type='text' name='name' required='' id="shipmentCode" autocomplete="off")
+        label Takip Kodu
+      button(type="button" id="shipment-check-btn" data-bs-toggle='modal' data-bs-target='#checkModal')
+        span
+        span
+        span
+        span
+        |
+        p(style="margin:0") Sorgula
+
+mixin updateCargoForm()
+  .customFormBox(style="height:380px")
+    h2 Kargo Güncelle
+    form(class="customForm")
+      span(class="errorMessage")
+      .user-box
+        input(type='text' name='name' required='' id="cargoCode" autocomplete="off")
+        label Takip Kodu
+      .user-box
+        +customSelectBox()
+      button(id="updateCargoStatus")
+        span
+        span
+        span
+        span
+        |
+        p(style="margin:0") Güncelle
+mixin customSelectBox()
+  select#cusSelectbox(name='')
+    option(value='0') Kargo Durumu
+    option(value='paketlendi') Paketlendi
+    option(value='aktarmada') Aktarmada
+    option(value='dagitimSubesinde') Dağıtım Şubesinde
+    option(value='kuryede') Kuryede
+    option(value='teslimEdildi') Teslim Edildi
 
 
 

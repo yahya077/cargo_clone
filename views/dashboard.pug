@@ -1,0 +1,11 @@
+extends layouts/main_layout.pug
+
+include mixins/mixins
+block content
+    .loader
+    .formWrapper
+        +updateNameForm(branchLoggedIn)
+        +createCargoForm()
+        +checkCargoForm()
+        +updateCargoForm()
+        +createModal()

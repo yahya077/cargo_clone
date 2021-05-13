@@ -11,6 +11,14 @@ const BranchSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please add an address']
     },
+    code: {
+        type: String,
+        required: [true, 'Please add an code']
+    },
+    pass: {
+        type: String,
+        required: [true, 'Please add an pass']
+    },
     location: {
         // GeoJSON Point
         type: {

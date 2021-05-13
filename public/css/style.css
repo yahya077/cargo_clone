@@ -1,5 +1,4 @@
 /*comment styles */
-
 * {
     margin: 0;
     padding: 0;
@@ -426,6 +425,197 @@ footer {
     color: #353535;
 }
 
+.customForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-wrapper {
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+}
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 104, 179,.5);
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    border-radius: 10px;
+}
+
+.customFormBox .user-box {
+    width: 100%;
+}
+
+.login-box h2,.customFormBox h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.login-box .user-box, .customFormBox .user-box {
+    position: relative;
+}
+
+.login-box .user-box input, .customFormBox .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.login-box .user-box label, .customFormBox .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label,
+.customFormBox .user-box input:focus ~ label,
+.customFormBox .user-box input:valid ~ label{
+    top: -20px;
+    left: 0;
+    color: #ef7d00;
+    font-size: 12px;
+}
+
+.login-box form a,
+.customFormBox form a,
+.customFormBox form button
+{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+}
+
+.customFormBox form button {
+    background: none;
+    border: none;
+}
+
+.login-box a:hover,
+.customFormBox a:hover,
+.customFormBox button:hover {
+    background: #ef7d00;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ef7d00,
+    0 0 25px #ef7d00,
+    0 0 50px #ef7d00,
+    0 0 100px #ef7d00;
+}
+
+.login-box a span,
+.customFormBox a span,
+.customFormBox button span{
+    position: absolute;
+    display: block;
+}
+
+.login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ef7d00);
+    animation: btn-anim1 1s linear infinite;
+}
+
+.login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ef7d00);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+.login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #ef7d00);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+.login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #ef7d00);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+form .errorMessage{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+    color: red;
+}
+
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 3rem 0;
+}
+
+.customFormBox {
+    width: 400px;
+    height: 340px;
+    padding: 40px;
+    background: rgba(0, 104, 179,.5);
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    border-radius: 10px;
+    margin-bottom: 3rem;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999999;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+    background: linear-gradient(rgba(0, 104, 179,.5), #fff);
+}
+
 /*animation*/
 @keyframes blinkingCtx {
     0% {
@@ -447,4 +637,184 @@ footer {
     100% {
         border: 1px solid #0069b3
     }
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+    50%,100% {
+        left: 100%;
+    }
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+    50%,100% {
+        top: 100%;
+    }
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+    50%,100% {
+        right: 100%;
+    }
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+    50%,100% {
+        bottom: 100%;
+    }
+}
+
+.selected-item {
+    margin: 20px 0;
+}
+.cusSelBlock {
+    height: 50px;
+    min-width: 250px;
+}
+#cusSelectbox {
+    height: 100%;
+    width: 100%;
+}
+.s-hidden {
+    visibility: hidden;
+}
+.cusSelBlock {
+    display: inline-block;
+    position: relative;
+    -webkit-perspective: 800px;
+    perspective: 800px;
+}
+.selectLabel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    background-color: #fff;
+    border: 1px solid #ef7d00;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    color: #333;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    width: 100%;
+    letter-spacing: 2px;
+    line-height: 50px;
+    padding: 0 50px 0 20px;
+    text-align: left;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transition: -webkit-transform 300ms;
+    transition: -webkit-transform 300ms;
+    transition: transform 300ms;
+    transition: transform 300ms, -webkit-transform 300ms;
+    -webkit-backface-visibility: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.selectLabel:after {
+    content: '\25BC';
+    border-left: 1px solid #ef7d00;
+    color: #ef7d00;
+    font-size: 12px;
+    line-height: 17px;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    right: 0px;
+    top: 15%;
+    height: 31%;
+    width: 50px;
+}
+.selectLabel:active {
+    -webkit-transform: rotateX(30deg);
+    transform: rotateX(30deg);
+}
+.selectLabel:active:after {
+    content: '\25B2';
+}
+.selectLabel.active:after {
+    content: '\25B2';
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.options {
+    position: absolute;
+    top: 50px;
+    height: 1px;
+    width: 100%;
+}
+.options li {
+    background-color: #ffffff;
+    border-left: 1px solid #ef7d00;
+    border-right: 1px solid #ef7d00;
+    border-bottom: 1px solid #ef7d00;
+    cursor: pointer;
+    display: block;
+    line-height: 50px;
+    list-style: none;
+    opacity: 1;
+    padding: 0 50px 0 20px;
+    text-align: left;
+    -webkit-transition: -webkit-transform 300ms ease;
+    transition: -webkit-transform 300ms ease;
+    transition: transform 300ms ease;
+    transition: transform 300ms ease, -webkit-transform 300ms ease;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    z-index: 0;
+    height: 50px;
+    width: 88%;
+}
+.options li:hover, .options li.active {
+    background-color: #ef7d00;
+    color: #fff;
+    z-index: 99999  ;
+}
+.options li:nth-child(1) {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    z-index: 6;
+}
+.options li:nth-child(2) {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    z-index: 5;
+}
+.options li:nth-child(3) {
+    z-index: 4;
+}
+.options li:nth-child(4) {
+    z-index: 3;
+}
+.options li:nth-child(5) {
+    z-index: 2;
+}
+.options li:nth-child(6) {
+    z-index: 1;
+}
+.feaBlock {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.hidden {
+    display: none!important;
 }
