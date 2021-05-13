@@ -9,6 +9,8 @@ git clone https://github.com/yahya077/cargo_clone.git
 
 npm install
 
+npm run dev
+
 ```
 
 ## 📫&nbsp; Have a question? Want to chat? Ran into a problem?
